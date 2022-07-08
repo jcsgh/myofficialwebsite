@@ -28,13 +28,14 @@ video {
   }
 
   .overlay div {
-    background: #000 none repeat scroll 0 0;
+    background: #ff4957 none repeat scroll 0 0;
     color: tan;
-    font-weight: 600;
+    font-weight: 700;
     margin: 2rem 3rem 0;
     mix-blend-mode: overlay;
     padding: 5px 15px;
     text-align: center;
+    border-radius: 30px;
 }
 
 /* Center child elements */
@@ -54,22 +55,8 @@ body {
 .website-counter {
     mix-blend-mode: overlay;
   background-color: #ff4957;
-  height: 50px;
-  width: 80px;
   color: white;
   border-radius: 30px;
   font-weight: 700;
-  font-size: 25px;
-  margin-top: 10px;
-}
-
-/* Styles for reset button */
-#reset {
-  margin-top: 20px;
-  background-color: #008cba;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 8px 20px;
-  color: white;
-  border: 0;
+  margin: 2rem 3rem 0;
 }
