@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,43 @@
     <link rel="stylesheet" href="styles.css">
     <title>My Offcial Website</title>
 </head>
+
 <body>
     <div class="video-container">
         <video playsinline autoplay muted loop poster="" id="bgvid">
-          <source src="RPReplay_Final1656103243.mov" type="video/mp4">
+            <source src="RPReplay_Final1656103243.mov" type="video/mp4">
         </video>
     </div>
     <div class="overlay">
-        <h2>Number of people rickrolled: </h2>
-      </div>
+        <div>People rickrolled: </div>
+        <div class="website-counter"></div>
+        <button id="reset">Reset</button>
+    </div>
+
+    <script>
+
+        var counterContainer = document.querySelector(".website-counter");
+        var resetButton = document.querySelector("#reset");
+        var visitCount = localStorage.getItem("page_view");
+
+        // Check if page_view entry is present
+        if (visitCount) {
+            visitCount = Number(visitCount) + 1;
+            localStorage.setItem("page_view", visitCount);
+        } else {
+            visitCount = 1;
+            localStorage.setItem("page_view", 1);
+        }
+        counterContainer.innerHTML = visitCount;
+
+        // Adding onClick event listener
+        resetButton.addEventListener("click", () => {
+            visitCount = 1;
+            localStorage.setItem("page_view", 1);
+            counterContainer.innerHTML = visitCount;
+        });
+
+    </script>
 </body>
+
 </html>
