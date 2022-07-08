@@ -1,14 +1,18 @@
 .video-container{
-    position: absolute;
-    width: 100%;
+    position:fixed;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 video {
     object-fit: cover;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -36,27 +40,4 @@ video {
     padding: 5px 15px;
     text-align: center;
     border-radius: 30px;
-}
-
-/* Center child elements */
-body,
-.website-counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-body {
-  height: 100vh;
-}
-
-/* Styles for website counter container */
-.website-counter {
-    mix-blend-mode: overlay;
-  background-color: #ff4957;
-  color: white;
-  border-radius: 30px;
-  font-weight: 700;
-  margin: 2rem 3rem 0;
 }
